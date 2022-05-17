@@ -18,10 +18,12 @@ void MainComponent::buttonClicked(Button* button)
         if (playState == PlayState::Stop)
         {
             record_button.onClick = [this]() { start_record(); };
+            record_button.setColour(TextButton::ColourIds::buttonColourId, Colours::limegreen); // not working
         }
         else if (playState == PlayState::Play)
         {
             record_button.onClick = [this]() { stop_record(); };
+            record_button.setColour(TextButton::ColourIds::buttonColourId, Colours::indianred); // not working
         }
     }
 }
